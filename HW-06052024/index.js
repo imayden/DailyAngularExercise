@@ -1,4 +1,6 @@
 
+// Ayden Deng
+
 // Create a "close" button
 function addCloseButton(li) {
     var span = document.createElement("SPAN");

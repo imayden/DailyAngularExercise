@@ -1,0 +1,41 @@
+<!-- Ayden Deng -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="myDIV" class="header">
+    <h2 style="margin:5px">My To-Do List</h2>
+    <div class="container">
+        <div class="task-input">
+            <input type="text" id="myInput" placeholder="Task...">
+            <input type="text" id="myDescription" placeholder="Description...">
+
+            <div class="add-btn">
+                <span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+        </div>
+        <div class="checkbox-container">
+            <label for="multiple">Multiple</label>
+            <input type="checkbox" id="multiple">
+        </div>
+    </div>
+
+  </div>
+
+  <ul id="myUL"></ul>
+
+  <script src="index.js"></script>
+</body>
+<div class="footerArea">
+    2024 © Ayden Deng
+</div>
+</html>

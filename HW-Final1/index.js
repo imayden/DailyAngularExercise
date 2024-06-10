@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
     var icon = document.createElement("span");
     icon.className = isExpanded ? "collapse" : "expand";
-    icon.textContent = isExpanded ? " " : " ";
+    icon.textContent = isExpanded ? " - " : " + ";
     titleDiv.appendChild(icon);
   
     var descriptionDiv = document.createElement("div");
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
     var closeBtn = document.createElement("span");
     closeBtn.className = "close";
-    closeBtn.textContent = "\u00D7";
+    closeBtn.textContent = "\u00D7"; // x icon
     closeBtn.onclick = function () {
       li.style.display = "none";
     };
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     for (let li of lis) {
       if (!multiple && li !== selectedLi) {
         li.classList.remove("expanded");
-        li.querySelector(".title span").textContent = "";
+        li.querySelector(".title span").textContent = " + ";
       }
     }
   
     selectedLi.classList.toggle("expanded");
     var icon = selectedLi.querySelector(".title span");
-    icon.textContent = selectedLi.classList.contains("expanded") ? " " : " ";
+    icon.textContent = selectedLi.classList.contains("expanded") ? " - " : " + ";
   }
   
   // Add New Task

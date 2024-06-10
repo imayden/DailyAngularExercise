@@ -43,7 +43,7 @@ body {
     padding: 12px 8px;
     list-style-type: none;
     background: #eee;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.2s;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -77,11 +77,15 @@ body {
   
   .close {
     position: absolute;
-    right: 0;
+    right: 30px;
     top: 0;
     padding: 12px 16px;
     cursor: pointer;
   }
+
+  /* .close {
+    cursor: pointer;
+  } */
   
   .close:hover {
     background-color: #f44336;
@@ -139,6 +143,7 @@ body {
 
   .add-btn:hover {
     background-color: #ddd;
+    transition: 0.2s;
   }
   
   .header label {

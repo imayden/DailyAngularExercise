@@ -1,0 +1,62 @@
+# Note for today's class - 06/18/2024
+
+## Personal Project 
+
+1. Find a real project - choose a real project from a real company (not a consultant company, e.g., EA: https://www.ea.com/) in your residential area (e.g., Illinois)
+2. E.g., build a official showcasewebsite for a company (Full Stack: both front-end and back-end, for e.g., login & logout)
+3. Clone parts of the website, not rebuilding the whole website (the website we choose will be the personal homework that we need to partially clone)
+4. Should choose a company that is not Antra’s client? 
+5. This project will be public for all of the client employers in our resumes while marketing.
+6. Use Angular
+7. Will talk about MongoDB, nextJS
+8. Goal is to communicate and understand better about the project and technologies
+
+### Git: https://learngitbranching.js.org/
+1. CI/CD Pipeline
+2. Pull Request: Open a pull request and choose a branch to merge into
+3. Code Reviews
+4. Code Conflict: With conflicts: Same line of codes in the same ticket / codebase have been modified by multiple persons 
+4.1 Solve small conflicts: 
+- Manually fix the codes by choosing one to keep it as final version and delete the others; Or go back to the previous version
+- E.g., Branches A and B were working on the same ticket/code line: A merged the PR first and B did it later which caused conflicts --> 
+-- 1. Close pull request for B(PR); 
+-- 2. There is oprion to go back to VSCode to solve conflicts
+-- 2. Update latest release branch, then create new feature branch C in the lastest release branch, and apply all changes from B to C
+4.2 Solve big conflicts: 
+-- 1. Discuss with team
+-- 2. Choose one version to work as major version, and do peering coding to solve problems together
+
+#### Common Git Commands
+// Basics
+- git init – Initialize a new Git repository.
+- git clone <repo> – Clone an existing repository.
+- git branch <branch-name> - Create a new branch. //WILL BE PREFFERED WAY TO CREATE NEW BRANCH
+- git checkout -b <branch-name> – Create and switch to a new branch.
+- git revert: Creates a new commit that undoes the changes of a previous commit.
+- git revert <Branch>: This command does not exist; use git revert <commit> to undo a specific commit.
+- git rebase: Moves or combines a sequence of commits to a new base commit, creating a linear history.
+
+// Push
+- git add <file> – Stage changes for commit.
+- git commit -m "message" – Commit staged changes with a message.
+- git push origin <branch-name> – Push commits to a remote repository.
+
+// Pull and Merge
+- git pull – Fetch and merge changes from a remote repository.
+- git merge <branch-name> – Merge a specified branch into the current branch.
+- git fetch
+
+// Status
+- git status – Show the status of the working directory and staging area.
+- git log – Show the commit history.
+
+#### CI/CD & Branches Conceprs
+1. Sprint Branches: Branches created for a specific sprint in Agile, where multiple tasks are developed simultaneously
+2. Release Branches: Branches used to prepare for a new product release, focusing on bug fixes and final adjustments
+3. Feature Branches: Branches created to develop specific features or enhancements separately from the main codebase
+4. Git Tickets: Issues or tasks tracked in a project management system, linked to specific changes or branches in Git.
+5. CI/CD Pipeline: Automated process that integrates code changes, runs tests, and deploys applications continuously and efficiently
+
+## Self-learning
+1. Learn a cloud technology by ourselvies - e.g., AWS(Amazon Web Services: https://aws.amazon.com/), GCP(Google Cloud Platform: https://cloud.google.com/)
+2. LeetCode Problems: Medium

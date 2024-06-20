@@ -13,3 +13,4 @@ export class AppComponent {
     this.colorService.changeColor(color);
   }
 }
+

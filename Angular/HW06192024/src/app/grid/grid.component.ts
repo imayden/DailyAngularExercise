@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { ColorService } from '../color.service';
 
 @Component({
@@ -23,6 +23,8 @@ export class GridComponent {
   ];
 
   activeTileColor: string = ''; 
+
+  @Output() colorChange = new EventEmitter<string>();
 
   constructor(private colorService: ColorService) {}
 

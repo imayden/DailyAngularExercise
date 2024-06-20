@@ -1,0 +1,6 @@
+<div class="grid-tile" [ngClass]="{'active': isActive}" [ngStyle]="isActive ? {'border-color': color, 'box-shadow': '5px 5px 0px ' + color} : {}">
+    <h2>{{ title }}</h2>
+    <p>{{ content }}</p>
+    <button class="button" mat-button (click)="changeColor()" [ngStyle]="{'background-color': color, 'color': 'white'}">Set {{ color }}</button>
+  </div>
+  

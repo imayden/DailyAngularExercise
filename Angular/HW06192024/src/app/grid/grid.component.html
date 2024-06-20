@@ -1,0 +1,9 @@
+<div class="grid-container">
+  <app-grid-tile *ngFor="let tile of tiles" 
+                 [title]="tile.title" 
+                 [content]="tile.content" 
+                 [color]="tile.color" 
+                 [activeTileColor]="activeTileColor"
+                 (colorChange)="handleColorChange($event)">
+  </app-grid-tile>
+</div>

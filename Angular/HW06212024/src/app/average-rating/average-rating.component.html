@@ -1,0 +1,10 @@
+<div class="average-rating">
+    <h2>Average Rating: {{ averageRating | number:'1.1-1' }}
+        <br />
+
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <span [ngStyle]="getStarStyle(i + 1)">
+                {{ i + 1 <= averageRating ? '★' : '☆' }} </span>
+            </span>
+    </h2>
+</div>

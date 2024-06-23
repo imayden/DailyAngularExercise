@@ -1,0 +1,11 @@
+<div class="rating">
+    <h3 class="username">{{ name }}</h3>
+    <div class="stars">
+        Rating: {{ rate | number:'1.1-1' }} &nbsp;
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <span [ngStyle]="getStarStyle(i + 1)">
+                {{ i + 1 <= rate ? '★' : '☆' }} </span>
+            </span>
+    </div>
+    <p class="content">{{ content }}</p>
+</div>

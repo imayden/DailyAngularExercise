@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="heading">
+    <img class="img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Visit_California_logo.svg/2560px-Visit_California_logo.svg.png">
+  </div>
+  <div class="content">
+    <div class="inputBar">
+      <input class="inputArea" [(ngModel)]="input" placeholder="Exlpre for your destiation...">
+    </div>
+
+    <div class="listArea">
+      <div class="result">
+        <ul class="ul">
+          <li class="li" *ngFor="let city of cityNames | sortingFilter | cityNameFilter: input">{{ city }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">2024 &copy; Ayden Deng</div>
+</div>

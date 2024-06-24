@@ -1,0 +1,70 @@
+.container {
+    padding: 1rem;
+}
+
+.container,
+content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+}
+
+.inputArea {
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    transition: all 0.3s ease-in-out;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+}
+
+.inputArea:hover {
+    border: 1.5px solid rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.listArea {
+    min-height: 600px;
+}
+
+.result {
+    margin: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
+}
+
+.ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.li {
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem;
+}
+
+.li:hover {
+    transform: scale(1.05);
+}
+
+.img {
+    display: absolute;
+    width: 100%;
+    max-width: 480px;
+    margin: 1rem;
+}
+
+.footer {
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 2rem;
+}

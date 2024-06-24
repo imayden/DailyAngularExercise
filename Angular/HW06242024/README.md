@@ -1,4 +1,4 @@
-# HW06242024
+# HW06242024 (Pipe Solution)
 
 ![screenshot](screenshot.png)
 

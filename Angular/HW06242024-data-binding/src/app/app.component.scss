@@ -21,6 +21,7 @@
     transition: all 0.3s ease-in-out;
     font-family: "Playwrite DE Grund", cursive;
     font-optical-sizing: auto;
+    min-width: 240px;
   } 
   
   .inputArea:hover {
@@ -44,6 +45,7 @@
   .ul {
     list-style-type: none;
     padding-left: 1rem;
+    min-width: 250px;
   }
   
   .li {

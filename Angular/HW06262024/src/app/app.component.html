@@ -1,0 +1,13 @@
+<mat-toolbar class="toolbar" color="primary">
+  <div>
+    <button class="nav-title" mat-button [routerLink]="['/home']">Search Book</button>
+  </div>
+  <div class="nav-btns">
+    <button class="nav-btn" mat-button [routerLink]="['/home']">Home</button>
+    <button class="nav-btn" mat-button [routerLink]="['/wishlist']">Show Wishlist</button>
+  </div>
+</mat-toolbar>
+
+<div class="app-container">
+  <router-outlet></router-outlet>
+</div>

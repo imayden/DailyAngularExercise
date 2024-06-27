@@ -4,8 +4,10 @@
   gap: 1rem;
 }
 
-.wishlist {
-  min-height: 200px;
+.list {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
 }
 
 .mat-list {
@@ -14,9 +16,6 @@
   gap: 1rem;
 }
 
-.mdc-list-item_content {
-  height: 100px;
-}
 
 .mat-list-item {
   display: flex;

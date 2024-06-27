@@ -1,41 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BookService } from '../service/book.service';
+import { WishlistService } from '../service/wishlist.service';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+
+interface Book {
+  picture: string;
+  name: string;
+  publisher: string;
+  publishDate: string;
+  description: string;
+}
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-
-  books = [];
-
-
-  // Search for books
-
+export class HomeComponent implements OnInit {
+  books: Book[] = [];
+  wishlist: Book[] = [];
   private searchTerms = new Subject<string>();
 
-  constructor(private bookService: BookService) { }
-
-  onSearch(event: any){
-    const query = event.target.value;
-    this.searchTerms.next(query);
-  }
+  constructor(private bookService: BookService, private wishlistService: WishlistService) {}
 
   ngOnInit(): void {
+    this.wishlist = this.wishlistService.getWishlist();
     this.searchTerms.pipe(
-      debounceTime(500),
+      debounceTime(300),
       distinctUntilChanged(),
       switchMap((term: string) => this.bookService.searchBooks(term))
-    ).subscribe();
+    ).subscribe(books => this.books = books);
   }
 
-  // Add book to wishlist
-
-  addToWishlist(book: any){
-    
+  onSearch(event: any): void {
+    const query = event.target.value.trim();
+    if (query) {
+      this.searchTerms.next(query);
+    } else {
+      this.books = [];
+    }
   }
 
+  addToWishlist(book: Book): void {
+    this.wishlistService.addToWishlist(book);
+    this.wishlist = this.wishlistService.getWishlist();
+  }
+
+  removeFromWishlist(book: Book): void {
+    this.wishlistService.removeFromWishlist(book);
+    this.wishlist = this.wishlistService.getWishlist();
+  }
 }

@@ -1,0 +1,75 @@
+.search-container {
+    margin: 16px;
+  }
+  
+  .page-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+  }
+  
+  .booklist {
+    min-height: 200px;
+    background-color: red;
+  }
+
+  .mat-grid-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .book-card {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items:flex-start;
+    justify-content: start;
+    width: 100%;
+  }
+  
+  .book-image {
+    flex: 0 0 200px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  
+  .book-info {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .book-title {
+    margin: 0;
+  }
+  
+  .book-publisher {
+    margin: 8px 0;
+  }
+  
+  .book-description {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+  
+  .wishlist {
+    min-width: 200px;
+    min-height: 200px;
+    background-color: green;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .page-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

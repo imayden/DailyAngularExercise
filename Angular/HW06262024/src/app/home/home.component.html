@@ -1,17 +1,37 @@
-<!-- search bar -->
-<div class="search-bar-container">
-    <mat-form-field class="search-bar">
-        <input matInput (input)="onSearch($event)" placeholder="Search for books">
+<div class="search-container">
+    <mat-form-field class="example-full-width">
+      <input matInput (input)="onSearch($event)" placeholder="Search for books">
     </mat-form-field>
-</div>
-
-<!-- book list -->
-<div class="book-list-contianer">
-    <mat-list class="book-list">
-        <mat-list-item class="book-list-item">
-            Book List
+  </div>
+  <div class="page-container">
+    <div class="booklist">
+      <mat-grid-list cols="1" rowHeight="500px" gutterSize="1rem">
+        <mat-grid-tile *ngFor="let book of books">
+          <mat-card class="book-card">
+            <div class="card-content">
+              <img mat-card-image [src]="book.picture" alt="{{book.name}}" class="book-image">
+              <div class="book-info">
+                <h6 class="book-title">{{book.name}}</h6>
+                <p class="book-publisher">{{book.publisher}} - {{book.publishDate}}</p>
+                <ul class="book-description">
+                  <li>{{book.description}}</li>
+                </ul>
+                <button mat-button (click)="addToWishlist(book)">Add to Wishlist</button>
+              </div>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  
+    <div class="wishlist">
+      <h2>Wishlist</h2>
+      <mat-list>
+        <mat-list-item *ngFor="let book of wishlist">
+          <h3 matLine>{{book.name}}</h3>
+          <button mat-button (click)="removeFromWishlist(book)">Remove</button>
         </mat-list-item>
-
-    </mat-list>
-
-</div>
+      </mat-list>
+    </div>
+  </div>
+  

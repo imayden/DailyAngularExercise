@@ -5,18 +5,22 @@
   </div>
   <div class="page-container">
     <div class="booklist">
-      <mat-grid-list cols="1" rowHeight="500px" gutterSize="1rem">
+      <mat-grid-list cols="1" rowHeight="388px" gutterSize="1rem">
         <mat-grid-tile *ngFor="let book of books">
           <mat-card class="book-card">
             <div class="card-content">
-              <img mat-card-image [src]="book.picture" alt="{{book.name}}" class="book-image">
+            <div class="cover">
+                <img mat-card-image [src]="book.picture" alt="{{book.name}}" class="book-image">
+              <button class="btn" mat-button (click)="addToWishlist(book)">Add to Wishlist</button>
+
+            </div>
+              
               <div class="book-info">
                 <h6 class="book-title">{{book.name}}</h6>
                 <p class="book-publisher">{{book.publisher}} - {{book.publishDate}}</p>
                 <ul class="book-description">
                   <li>{{book.description}}</li>
                 </ul>
-                <button mat-button (click)="addToWishlist(book)">Add to Wishlist</button>
               </div>
             </div>
           </mat-card>

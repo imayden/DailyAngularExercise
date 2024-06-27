@@ -8,29 +8,6 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-// export class BookDataService {
-
-//   // private http = inject(HttpClient);
-
-//   constructor(private http : HttpClient) { }
-
-//   searchBooks(term: string): Observable<Book> {
-//     const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${term}`;
-//     return this.http.get(apiUrl).pipe(
-//       map((response: any) => response.items.map(item => this.transformToBook(item)))
-//     );
-    
-//   }
-//   private transformToBook(item: any): Book {
-//     return {
-//       picture: item.volumeInfo.imageLinks?.thumbnail,
-//       name: item.volumeInfo.title,
-//       publisher: item.volumeInfo.publisher,
-//       publishDate: item.volumeInfo.publishedDate,
-//       description: item.volumeInfo.description
-//     };
-//   }
-// }
 
 export class BookDataService {
 

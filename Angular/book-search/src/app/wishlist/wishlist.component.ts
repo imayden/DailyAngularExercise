@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
 import { Book } from '../interfaces/book.interface';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-wishlist',

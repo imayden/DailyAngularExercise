@@ -9,6 +9,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
+import { ShowWishlistComponent } from './show-wishlist/show-wishlist.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     BooklistComponent,
     WishlistComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ShowWishlistComponent
   ],
   imports: [
     BrowserModule,

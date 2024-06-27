@@ -1,14 +1,14 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { BookDataService } from '../services/book-data.service';
-import { Book } from '../interfaces/book.interface';
 import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Book } from '../interfaces/book.interface';
+import { BookDataService } from '../services/book-data.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  selector: 'app-show-wishlist',
+  templateUrl: './show-wishlist.component.html',
+  styleUrl: './show-wishlist.component.scss'
 })
-export class HomeComponent {
+export class ShowWishlistComponent {
   books: Book[] = [];
   wishlist: Book[] = [];
 
@@ -46,4 +46,5 @@ export class HomeComponent {
   private saveWishlist() {
     localStorage.setItem('wishlist', JSON.stringify(this.wishlist));
   }
+
 }

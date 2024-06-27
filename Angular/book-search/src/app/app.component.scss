@@ -1,0 +1,35 @@
+
+.nav {
+    display: flex;
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.routerLink {
+    text-decoration: none;
+    border-radius: 10rem;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.routerLink:hover {
+    background-color: rgb(151, 194, 209);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.title:active{
+    color: darkblue;
+}
+
+.title:visited,
+.routerLink:visited {
+    color: black;
+}

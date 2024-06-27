@@ -2,6 +2,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 480px;
+    margin-inline-start: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .wishlist-item {
@@ -16,9 +22,10 @@
     background-color: #ff4d4d;
     border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 1rem;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 10rem;
+    margin-left: 15rem;
   }
   
   .wishlist-item button:hover {

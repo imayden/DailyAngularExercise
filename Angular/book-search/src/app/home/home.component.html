@@ -1,0 +1,11 @@
+<!-- <p>home works!</p> -->
+<div class="container">
+  <div class="booklist">
+    <app-search-bar (searchEvent)="onSearch($event)"></app-search-bar>
+    <app-booklist [books]="books" (addToWishlist)="addToWishlist($event)"></app-booklist>
+  </div>
+  <app-wishlist [wishlist]="wishlist" (removeFromWishlist)="removeFromWishlist($event)"></app-wishlist>
+</div>
+
+
+

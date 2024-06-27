@@ -1,0 +1,49 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .tile {
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .tile:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .image-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .info h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+  }
+  
+  .info p {
+    margin: 0;
+    color: #555;
+  }
+  

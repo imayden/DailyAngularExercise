@@ -1,0 +1,14 @@
+<!-- <p>booklist works!</p> -->
+<div class="grid">
+  <div class="tile" *ngFor="let book of books" (click)="onAddToWishlist(book)">
+    <div class="image-container">
+      <img [src]="book.picture" alt="Book image">
+    </div>
+    <div class="info">
+      <h3 *ngIf="book.name">{{ book.name }}</h3>
+      <p *ngIf="book.publisher">{{ book.publisher }}</p>
+      <p *ngIf="book.publishDate">{{ book.publishDate }}</p>
+      <p *ngIf="book.description">{{ book.description }}</p>
+    </div>
+  </div>
+</div>

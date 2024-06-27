@@ -1,7 +1,10 @@
-<h2>Wishlist</h2>
-<mat-list>
-  <mat-list-item *ngFor="let book of wishlist">
-    <h3 matLine>{{book.name}}</h3>
-    <button mat-button (click)="removeFromWishlist(book)">Remove</button>
-  </mat-list-item>
-</mat-list>
+<div class="wishlist">
+    <h2>Wishlist</h2>
+    <mat-list>
+      <mat-list-item *ngFor="let book of wishlist">
+        <h6 class="bookname" matLine>{{book.name}}</h6>
+        <button class="btn" mat-button (click)="removeFromWishlist(book)">Remove</button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

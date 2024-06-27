@@ -1,0 +1,50 @@
+.page-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+}
+
+.wishlist {
+  min-height: 200px;
+}
+
+.mat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mdc-list-item_content {
+  height: 100px;
+}
+
+.mat-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 1rem;
+  border: solid 1px gray;
+  background-color: #2c2c2c; 
+  color: white; 
+}
+
+.bookname {
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  flex-shrink: 0;
+  margin-left: 16px;
+  border: 2px solid;
+}
+
+@media screen and (max-width: 991px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -10,7 +10,6 @@
   
   .booklist {
     min-height: 200px;
-    background-color: red;
   }
 
   .cover {
@@ -35,6 +34,13 @@
   .mat-grid-tile {
     width: 100%; 
     border-radius: 2rem;
+    border: solid 1px gray;
+  }
+
+  .app-wishlist {
+    border-radius: 2rem;
+    border: solid 1px gray;
+    padding: 1rem;
   }
   
   .book-card {

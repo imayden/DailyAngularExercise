@@ -28,7 +28,7 @@
       </mat-grid-list>
     </div>
   
-    <div class="wishlist">
+    <!-- <div class="wishlist">
       <h2>Wishlist</h2>
       <mat-list>
         <mat-list-item *ngFor="let book of wishlist">
@@ -36,6 +36,10 @@
           <button mat-button (click)="removeFromWishlist(book)">Remove</button>
         </mat-list-item>
       </mat-list>
+    </div> -->
+    <div class="app-wishlist">
+      <app-wishlist></app-wishlist>
     </div>
+
   </div>
   
